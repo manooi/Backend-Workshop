@@ -14,7 +14,7 @@ namespace BasicCSharp
             string chosenOne = demoObject.Foo(1);
 
             // change variable value to correct one.
-            const string expected = "Foo()";
+            const string expected = "Foo(int)";
 
             Assert.Equal(expected, chosenOne);
         }
@@ -27,7 +27,7 @@ namespace BasicCSharp
             string chosenOne = demoObject.Foo((object)1);
 
             // change variable value to correct one.
-            const string expected = "Foo()";
+            const string expected = "Foo(object)";
 
             Assert.Equal(expected, chosenOne);
         }
@@ -41,7 +41,7 @@ namespace BasicCSharp
             string chosenOne = demoObject.Foo(argument);
 
             // change variable value to correct one.
-            const string expected = "Foo()";
+            const string expected = "Foo(int)";
 
             Assert.Equal(expected, chosenOne);
         }
