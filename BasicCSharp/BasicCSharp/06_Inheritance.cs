@@ -13,7 +13,7 @@ namespace BasicCSharp
             var demoClass = new InheritMemberAccessDemoClass();
 
             // please change the variable value to fix the test.
-            const string expected = "";
+            const string expected = "Public Property Value";
 
             Assert.Equal(expected, demoClass.PublicProperty);
         }
@@ -26,7 +26,7 @@ namespace BasicCSharp
             string actualValue = demoClass.ManipulateProtectedMember();
 
             // please change the variable value to fix the test.            
-            const string expected = "";
+            const string expected = "The value is Protected Property Value";
 
             Assert.Equal(expected, actualValue);
         }
@@ -40,7 +40,7 @@ namespace BasicCSharp
             string actualValue = castToBaseClass.VirtualMethod();
 
             // please change the variable value to fix the test.
-            const string expected = "";
+            const string expected = "DerivedClass";
 
             Assert.Equal(expected, actualValue);
         }
@@ -54,7 +54,7 @@ namespace BasicCSharp
             bool isNull = castToBaseClass == null;
 
             // please change the variable value to fix the test.
-            const bool expected = true;
+            const bool expected = false;
 
             Assert.Equal(expected, isNull);
         }
@@ -69,7 +69,7 @@ namespace BasicCSharp
             bool isNull = castResult == null;
 
             // please change the variable value to fix the test.
-            const bool expected = false;
+            const bool expected = true;
 
             Assert.Equal(expected, isNull);
         }
@@ -81,7 +81,7 @@ namespace BasicCSharp
             object castToObject = demoClass;
 
             // please change the variable value to fix the test.
-            Type expectedExceptionType = typeof(ArgumentException);
+            Type expectedExceptionType = typeof(InvalidCastException);
 
             Assert.NotEqual(typeof(SystemException), expectedExceptionType);
             Assert.NotEqual(typeof(Exception), expectedExceptionType);
